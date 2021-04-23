@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C8B8D36126323BB100CF6373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B8D36026323BB100CF6373 /* AppDelegate.swift */; };
+		C8B8D36326323BB100CF6373 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B8D36226323BB100CF6373 /* SceneDelegate.swift */; };
+		C8B8D36526323BB100CF6373 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B8D36426323BB100CF6373 /* ViewController.swift */; };
+		C8B8D36826323BB100CF6373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B8D36626323BB100CF6373 /* Main.storyboard */; };
+		C8B8D36A26323BB500CF6373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B8D36926323BB500CF6373 /* Assets.xcassets */; };
+		C8B8D36D26323BB500CF6373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B8D36B26323BB500CF6373 /* LaunchScreen.storyboard */; };
+		C8B8D37626323BDF00CF6373 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = C8B8D37526323BDF00CF6373 /* questions.json */; };
+		C8B8D3952632490700CF6373 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B8D3942632490700CF6373 /* Question.swift */; };
+		C8B8D3992632496A00CF6373 /* QuestionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B8D3982632496A00CF6373 /* QuestionsModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C8B8D35D26323BB100CF6373 /* Rock Trivia App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rock Trivia App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8B8D36026323BB100CF6373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C8B8D36226323BB100CF6373 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C8B8D36426323BB100CF6373 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C8B8D36726323BB100CF6373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C8B8D36926323BB500CF6373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C8B8D36C26323BB500CF6373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C8B8D36E26323BB500CF6373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8B8D37526323BDF00CF6373 /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
+		C8B8D3942632490700CF6373 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		C8B8D3982632496A00CF6373 /* QuestionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8B8D35A26323BB100CF6373 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C8B8D35426323BB100CF6373 = {
+			isa = PBXGroup;
+			children = (
+				C8B8D35F26323BB100CF6373 /* Rock Trivia App */,
+				C8B8D35E26323BB100CF6373 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C8B8D35E26323BB100CF6373 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8B8D35D26323BB100CF6373 /* Rock Trivia App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8B8D35F26323BB100CF6373 /* Rock Trivia App */ = {
+			isa = PBXGroup;
+			children = (
+				C8B8D36026323BB100CF6373 /* AppDelegate.swift */,
+				C8B8D36226323BB100CF6373 /* SceneDelegate.swift */,
+				C8B8D36626323BB100CF6373 /* Main.storyboard */,
+				C8B8D36426323BB100CF6373 /* ViewController.swift */,
+				C8B8D3982632496A00CF6373 /* QuestionsModel.swift */,
+				C8B8D3942632490700CF6373 /* Question.swift */,
+				C8B8D37526323BDF00CF6373 /* questions.json */,
+				C8B8D36926323BB500CF6373 /* Assets.xcassets */,
+				C8B8D36B26323BB500CF6373 /* LaunchScreen.storyboard */,
+				C8B8D36E26323BB500CF6373 /* Info.plist */,
+			);
+			path = "Rock Trivia App";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C8B8D35C26323BB100CF6373 /* Rock Trivia App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8B8D37126323BB500CF6373 /* Build configuration list for PBXNativeTarget "Rock Trivia App" */;
+			buildPhases = (
+				C8B8D35926323BB100CF6373 /* Sources */,
+				C8B8D35A26323BB100CF6373 /* Frameworks */,
+				C8B8D35B26323BB100CF6373 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rock Trivia App";
+			productName = "Rock Trivia App";
+			productReference = C8B8D35D26323BB100CF6373 /* Rock Trivia App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8B8D35526323BB100CF6373 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					C8B8D35C26323BB100CF6373 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = C8B8D35826323BB100CF6373 /* Build configuration list for PBXProject "Rock Trivia App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C8B8D35426323BB100CF6373;
+			productRefGroup = C8B8D35E26323BB100CF6373 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8B8D35C26323BB100CF6373 /* Rock Trivia App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8B8D35B26323BB100CF6373 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8B8D36D26323BB500CF6373 /* LaunchScreen.storyboard in Resources */,
+				C8B8D37626323BDF00CF6373 /* questions.json in Resources */,
+				C8B8D36A26323BB500CF6373 /* Assets.xcassets in Resources */,
+				C8B8D36826323BB100CF6373 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8B8D35926323BB100CF6373 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8B8D36526323BB100CF6373 /* ViewController.swift in Sources */,
+				C8B8D3992632496A00CF6373 /* QuestionsModel.swift in Sources */,
+				C8B8D3952632490700CF6373 /* Question.swift in Sources */,
+				C8B8D36126323BB100CF6373 /* AppDelegate.swift in Sources */,
+				C8B8D36326323BB100CF6373 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C8B8D36626323BB100CF6373 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8B8D36726323BB100CF6373 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C8B8D36B26323BB500CF6373 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8B8D36C26323BB500CF6373 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C8B8D36F26323BB500CF6373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C8B8D37026323BB500CF6373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C8B8D37226323BB500CF6373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Rock Trivia App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.KyleJSh.Rock-Trivia-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C8B8D37326323BB500CF6373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Rock Trivia App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.KyleJSh.Rock-Trivia-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C8B8D35826323BB100CF6373 /* Build configuration list for PBXProject "Rock Trivia App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8B8D36F26323BB500CF6373 /* Debug */,
+				C8B8D37026323BB500CF6373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8B8D37126323BB500CF6373 /* Build configuration list for PBXNativeTarget "Rock Trivia App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8B8D37226323BB500CF6373 /* Debug */,
+				C8B8D37326323BB500CF6373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C8B8D35526323BB100CF6373 /* Project object */;
+}

@@ -1,0 +1,122 @@
+[{
+        "question": "In 1994, which band/artist was inducted into the Canadian Music Hall of Fame?",
+        "answers": [
+            "Neil Young",
+            "Bryan Adams",
+            "Gordon Lightfoot",
+            "Rush"
+        ],
+        "correctAnswerIndex": 3,
+        "feedback": "The iconic Canadian rock band Rush was inducted into the Canadian Music Hall of Fame in 1994 and the Rock and Roll Hall of Fame in 2013"
+    },
+    {
+        "question": "Where did the English rock band Genesis form?",
+        "answers": [
+            "London",
+            "Surrey",
+            "Liverpool",
+            "Manchester"
+        ],
+        "correctAnswerIndex": 1,
+        "feedback": "Genesis formed at Charterhouse School, Godalming, Surrey, in 1967."
+    },
+    {
+        "question": "From which band did 3 iconic guitarists emerge: Eric Clapton, Jeff Beck, Jimmy Page?",
+        "answers": [
+            "Led Zeppelin",
+            "Cream",
+            "The Yardbirds",
+            "Derek and the Dominos"
+        ],
+        "correctAnswerIndex": 2,
+        "feedback": "The Yardbirds are an English blues rock band from London. Eric Clapton replaced Anthony Topham, and after leaving, Jimmy Page and Jeff Beck joined."
+    },
+    {
+        "question": "What age was Janis Joplin when she passed away?",
+        "answers": [
+            "27",
+            "32",
+            "24",
+            "41"
+        ],
+        "correctAnswerIndex": 0,
+        "feedback": "Janis Joplin died of an accidental heroin overdose Oct 4, 1970. She was 27 years old."
+    },
+    {
+        "question": "Who is credited with inventing stage diving?",
+        "answers": [
+            "David Bowie",
+            "Iggy Pop",
+            "Jim Morrison",
+            "The Who"
+        ],
+        "correctAnswerIndex": 1,
+        "feedback": "Iggy Pop, lead singer of The Stooges, is credited with being the first stage diver. At age 62, he retired from the rebellious act after suffering a mild injury performing at New York's Carnegie Hall. "
+    },
+    {
+        "question": "What was Metallica's original band name?",
+        "answers": [
+            "Megadeth",
+            "MetalMania",
+            "Four Horsemen",
+            "Ignite"
+        ],
+        "correctAnswerIndex": 2,
+        "feedback": "Former guitarist Dave Mustaine, revealed that the band's name used to be the Four Horsemen"
+    },
+    {
+        "question": "Who is dubbed the King of Rock 'n' Roll?",
+        "answers": [
+            "Elvis Presley",
+            "Michael Jackson",
+            "Chuck Berry",
+            "The Beatles"
+        ],
+        "correctAnswerIndex": 0,
+        "feedback": "Elvis Aaron Presley has been called the King of Rock and Roll."
+    },
+    {
+        "question": "Lynyrd Skynyrd had a massive hit with which song that was also the name of a 2002 movie?",
+        "answers": [
+            "Freebird",
+            "Simple Man",
+            "Tuesday's Gone",
+            "Sweet Home Alabama"
+        ],
+        "correctAnswerIndex": 3,
+        "feedback": "The 2002 American romantic comedy starring Reese Witherspoon, was named after the 1971 famous hit Sweet Home Alabama"
+    },
+    {
+        "question": "Where did Aerosmith make their live debut?",
+        "answers": [
+            "Steven Tyler's parent's backyard",
+            "Nipmuc High School",
+            "Miller Social Club",
+            "Central Park Music Festival"
+        ],
+        "correctAnswerIndex": 1,
+        "feedback": "Nov 6 1970, Mendon, Massachusetts, Nipmuc Regional High School is where the American band Aerosmith performed their live debut."
+    },
+    {
+        "question": "Which guitarist once one a national squirrel shooting contest?",
+        "answers": [
+            "Ted Nugent",
+            "Steve Vai",
+            "Brad Paisley",
+            "Vince Gill"
+        ],
+        "correctAnswerIndex": 0,
+        "feedback": "In 1974, Ted Nugent won the National Squirrel Shooting Archery Contest, by making a shot at 150 yards."
+    },
+    {
+        "question": "Which Guns N' Roses member was ironically fired from the band because of drugs and alcohol?",
+        "answers": [
+            "Guitarist Slash",
+            "Drummer Steven Adler",
+            "Bassist Duff McKagan",
+            "Guitarist Ron 'Bumblefoot' Thal"
+        ],
+        "correctAnswerIndex": 0,
+        "feedback": "Former Guns N' Roses drummer Steven Adler was fired from the band in 1990 due to the inability to play because of drugs."
+    }
+]
