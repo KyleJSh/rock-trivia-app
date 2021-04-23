@@ -76,17 +76,6 @@
         "feedback": "Elvis Aaron Presley has been called the King of Rock and Roll."
     },
     {
-        "question": "Lynyrd Skynyrd had a massive hit with which song that was also the name of a 2002 movie?",
-        "answers": [
-            "Freebird",
-            "Simple Man",
-            "Tuesday's Gone",
-            "Sweet Home Alabama"
-        ],
-        "correctAnswerIndex": 3,
-        "feedback": "The 2002 American romantic comedy starring Reese Witherspoon, was named after the 1971 famous hit Sweet Home Alabama"
-    },
-    {
         "question": "Where did Aerosmith make their live debut?",
         "answers": [
             "Steven Tyler's parent's backyard",
