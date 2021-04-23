@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C804E2B02633464F008313AC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E2AF2633464F008313AC /* DetailViewController.swift */; };
 		C8B8D36126323BB100CF6373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B8D36026323BB100CF6373 /* AppDelegate.swift */; };
 		C8B8D36326323BB100CF6373 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B8D36226323BB100CF6373 /* SceneDelegate.swift */; };
 		C8B8D36526323BB100CF6373 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B8D36426323BB100CF6373 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C804E2AF2633464F008313AC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C8B8D35D26323BB100CF6373 /* Rock Trivia App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rock Trivia App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B8D36026323BB100CF6373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8B8D36226323BB100CF6373 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				C8B8D36926323BB500CF6373 /* Assets.xcassets */,
 				C8B8D36B26323BB500CF6373 /* LaunchScreen.storyboard */,
 				C8B8D36E26323BB500CF6373 /* Info.plist */,
+				C804E2AF2633464F008313AC /* DetailViewController.swift */,
 			);
 			path = "Rock Trivia App";
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				C8B8D36526323BB100CF6373 /* ViewController.swift in Sources */,
 				C8B8D3992632496A00CF6373 /* QuestionsModel.swift in Sources */,
 				C8B8D3952632490700CF6373 /* Question.swift in Sources */,
+				C804E2B02633464F008313AC /* DetailViewController.swift in Sources */,
 				C8B8D36126323BB100CF6373 /* AppDelegate.swift in Sources */,
 				C8B8D36326323BB100CF6373 /* SceneDelegate.swift in Sources */,
 			);
