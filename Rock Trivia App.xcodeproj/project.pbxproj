@@ -68,13 +68,13 @@
 				C8B8D36226323BB100CF6373 /* SceneDelegate.swift */,
 				C8B8D36626323BB100CF6373 /* Main.storyboard */,
 				C8B8D36426323BB100CF6373 /* ViewController.swift */,
+				C804E2AF2633464F008313AC /* DetailViewController.swift */,
 				C8B8D3982632496A00CF6373 /* QuestionsModel.swift */,
 				C8B8D3942632490700CF6373 /* Question.swift */,
 				C8B8D37526323BDF00CF6373 /* questions.json */,
 				C8B8D36926323BB500CF6373 /* Assets.xcassets */,
 				C8B8D36B26323BB500CF6373 /* LaunchScreen.storyboard */,
 				C8B8D36E26323BB500CF6373 /* Info.plist */,
-				C804E2AF2633464F008313AC /* DetailViewController.swift */,
 			);
 			path = "Rock Trivia App";
 			sourceTree = "<group>";

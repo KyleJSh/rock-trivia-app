@@ -16,7 +16,9 @@ class ViewController: UIViewController {
     var questions = [Question]()
     
     // keep track of correct answers to display at end of game, store in cache
-    var correctAnswers = 0
+    var numCorrect = 0
+    
+    var detailDialog:DetailViewController?
     
     // keep track of which question the user is on, store in cache
     var currentQuestionIndex = 0
@@ -25,6 +27,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        detailDialog = storyboard?.instantiateViewController(identifier: "ResultVC") as? DetailViewController
+        
+        // set modal presentation style
+        detailDialog?.modalPresentationStyle = .overCurrentContext
         
         // delegate of QuizModel
         model.delegate = self
@@ -36,13 +43,25 @@ class ViewController: UIViewController {
         
     }
 
-
+    // MARK: - Methods
+    
+    func displayQuestion() {
+        
+        // check there ARE questions, and that we aren't outside the bounds
+        guard questions.count > 0 && currentQuestionIndex < questions.count else {
+            return
+        }
+        
+        // display the question text
+        questionLabel.text = questions[currentQuestionIndex].question
+        
+        // reload tableview
+        tableView.reloadData()
+    }
 }
 
-// MARK: - Methods
-
-
 // MARK: - Quiz Protocol Methods
+
 extension ViewController: QuizProtocol, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,7 +97,15 @@ extension ViewController: QuizProtocol, UITableViewDelegate, UITableViewDataSour
         // check it's not nil
         if label != nil {
             
-       // TODO: set answer to label
+            // get reference to current question
+            let question = questions[currentQuestionIndex]
+            
+            // check there are answers, and that we aren't outside the bounds
+            if question.answers != nil && indexPath.row < question.answers!.count {
+                
+                label?.text = question.answers![indexPath.row]
+                
+            }
             
         }
         
@@ -86,10 +113,55 @@ extension ViewController: QuizProtocol, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        var titleText = ""
+        
+        // get reference to current question
+        let question = questions[currentQuestionIndex]
+        
+        if question.correctAnswerIndex! == indexPath.row {
+            
+            // user got the right answer!
+            print("User answered right")
+            titleText = "Correct!"
+            numCorrect += 1
+        }
+        else {
+            
+            // user got the wrong answer
+            print("User answered wrong")
+            titleText = "Wrong!"
+            
+        }
+        
+        if detailDialog != nil {
+            
+            // customize dialog text
+            detailDialog!.titleText = titleText
+            detailDialog!.feedbackText = question.feedback!
+            detailDialog!.buttonText = "Next"
+            
+            present(detailDialog!, animated: true, completion: nil)
+            
+        }
+        
+        // increment currentQuestionIndex
+        currentQuestionIndex += 1
+        
+        // display the next question
+        displayQuestion()
+        
+    }
+    
+    // MARK: - QuestionsProtocol
     
     func questionsRetrieved(_ questions: [Question]) {
         
-        print("Questions retrieved")
+        self.questions = questions
+        
+        // display the first question
+        displayQuestion()
         
     }
     
