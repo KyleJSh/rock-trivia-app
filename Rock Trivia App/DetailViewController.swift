@@ -87,10 +87,18 @@ class DetailViewController: UIViewController {
     
     @IBAction func dismissTapped(_ sender: Any) {
         
-        dismiss(animated: true, completion: nil)
-        
-        // dismiss the popup
-        delegate?.dialogDismissed()
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut) {
+            
+            self.dimView.alpha = 0
+            
+        } completion: { (true) in
+            
+            self.dismiss(animated: true, completion: nil)
+            
+            // dismiss the popup
+            self.delegate?.dialogDismissed()
+            
+        }
                 
     }
 }
