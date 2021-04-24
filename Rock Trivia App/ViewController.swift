@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     var currentQuestionIndex = 0
     
     var detailDialog:DetailViewController?
-    
+        
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -181,6 +181,13 @@ extension ViewController: DetailViewControllerProtocol {
             
             // present summary popup
             present(detailDialog!, animated: true, completion: nil)
+        }
+        else if currentQuestionIndex > questions.count {
+            // restart
+            print("Summary - restart tapped")
+            numCorrect = 0
+            currentQuestionIndex = 0
+            displayQuestion()
         }
         else if currentQuestionIndex < questions.count {
             

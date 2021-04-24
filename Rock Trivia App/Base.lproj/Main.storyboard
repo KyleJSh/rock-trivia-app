@@ -123,19 +123,20 @@
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEr-bI-MMa" userLabel="Title">
                                                         <rect key="frame" x="0.0" y="186.5" width="314" height="186.5"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="39"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Feedback" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKv-U2-uvW">
-                                                        <rect key="frame" x="0.0" y="373" width="314" height="186.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <rect key="frame" x="10" y="373" width="294" height="186.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfb-sW-sjN">
-                                                        <rect key="frame" x="135.5" y="559.5" width="43" height="186.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                        <rect key="frame" x="125.5" y="559.5" width="63" height="186.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                                         <state key="normal" title="Next"/>
                                                         <connections>
                                                             <action selector="dismissTapped:" destination="Mni-MO-9gE" eventType="touchUpInside" id="k6o-k8-oUR"/>
@@ -143,7 +144,7 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="DKv-U2-uvW" firstAttribute="width" secondItem="Oei-tp-fl7" secondAttribute="width" id="8dv-fi-W5U"/>
+                                                    <constraint firstItem="DKv-U2-uvW" firstAttribute="width" secondItem="Oei-tp-fl7" secondAttribute="width" constant="-20" id="8dv-fi-W5U"/>
                                                     <constraint firstItem="GEr-bI-MMa" firstAttribute="width" secondItem="Oei-tp-fl7" secondAttribute="width" id="FCI-Yg-AGL"/>
                                                 </constraints>
                                             </stackView>
@@ -176,6 +177,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="artistImage" destination="fBe-qX-HZv" id="a3g-Ew-rgf"/>
                         <outlet property="dialogView" destination="Fch-HX-iV5" id="0Xj-ZJ-NeR"/>
                         <outlet property="dimView" destination="yjM-9O-GTV" id="bSO-oH-r4t"/>
                         <outlet property="dismissButton" destination="Xfb-sW-sjN" id="hqG-wG-WOL"/>
