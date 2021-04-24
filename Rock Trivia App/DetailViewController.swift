@@ -17,8 +17,6 @@ class DetailViewController: UIViewController {
 
     // MARK: - Variables and Properties
     
-    var delegate:DetailViewControllerProtocol?
-    
     @IBOutlet weak var dimView: UIView!
     @IBOutlet weak var dialogView: UIView!
     
@@ -27,9 +25,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var feedbackLabel: UILabel!
     @IBOutlet weak var dismissButton: UIButton!
     
+    var delegate:DetailViewControllerProtocol?
     var currentQuestionIndex = 0
-    
-    var question:Question?
     
     var titleText = ""
     var feedbackText = ""
@@ -39,10 +36,21 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // round corner of dialog view
+        dialogView.layer.cornerRadius = 5
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        let savedIndex = StateManager.retrieveData(key: StateManager.questionIndexKey) as? Int
+        
+        if savedIndex != nil && savedIndex! < 11 {
+            
+            currentQuestionIndex = savedIndex!
+            
+        }
         
         // after answering 10 questions, user has tapped restart from summary popup and is back at the beginning, restart currentQuestionIndex
         if currentQuestionIndex == 11 {
@@ -57,9 +65,24 @@ class DetailViewController: UIViewController {
         feedbackLabel.text = feedbackText
         dismissButton.setTitle(buttonText, for: .normal)
         
+        dimView.alpha = 0
+        titleLabel.alpha = 0
+        feedbackLabel.alpha = 0
+        
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        
+        UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseOut, animations: {
+            
+            self.dimView.alpha = 1
+            self.titleLabel.alpha = 1
+            self.feedbackLabel.alpha = 1
+            
+        }, completion: nil)
+        
+    }
+    
     // MARK: - Methods
     
     @IBAction func dismissTapped(_ sender: Any) {
@@ -70,6 +93,4 @@ class DetailViewController: UIViewController {
         delegate?.dialogDismissed()
                 
     }
-    
-    
 }

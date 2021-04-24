@@ -9,16 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    // MARK: - Variables and Properties
+    
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     var model = QuestionsModel()
     var questions = [Question]()
-    
-    // keep track of correct answers to display at end of game, store in cache
     var numCorrect = 0
-    
-    // keep track of which question the user is on, store in cache
     var currentQuestionIndex = 0
     
     var detailDialog:DetailViewController?
@@ -63,7 +61,7 @@ class ViewController: UIViewController {
     }
 }
 
-// MARK: - Quiz Protocol Methods
+// MARK: - TableView Delegate Methods
 
 extension ViewController: QuizProtocol, UITableViewDelegate, UITableViewDataSource {
     
@@ -103,7 +101,7 @@ extension ViewController: QuizProtocol, UITableViewDelegate, UITableViewDataSour
             // check there are answers, and that we aren't outside the bounds
             if question.answers != nil && indexPath.row < question.answers!.count {
                 
-                label?.text = question.answers![indexPath.row]
+                label!.text = question.answers![indexPath.row]
                 
             }
             
@@ -124,8 +122,13 @@ extension ViewController: QuizProtocol, UITableViewDelegate, UITableViewDataSour
             
             // user got the right answer!
             print("User answered right")
+            
+            // update titleText
             titleText = "Correct!"
+            
+            // increment numCorrect
             numCorrect += 1
+            
         }
         else {
             
@@ -142,8 +145,11 @@ extension ViewController: QuizProtocol, UITableViewDelegate, UITableViewDataSour
             detailDialog!.feedbackText = question.feedback!
             detailDialog!.buttonText = "Next"
             
-            present(detailDialog!, animated: true, completion: nil)
-            
+            DispatchQueue.main.async {
+                
+                self.present(self.detailDialog!, animated: true, completion: nil)
+                
+            }
         }
         
     }
@@ -154,12 +160,28 @@ extension ViewController: QuizProtocol, UITableViewDelegate, UITableViewDataSour
         
         self.questions = questions
         
+        // check if we should restore the state from user defaults before displaying first question
+        let savedIndex = StateManager.retrieveData(key: StateManager.questionIndexKey) as? Int
+        
+        // if there is saved data, check it's not nil and that it's within the array bounds
+        if savedIndex != nil && savedIndex! < self.questions.count {
+            
+            currentQuestionIndex = savedIndex!
+            
+            // retrieve the number correct from user defaults
+            let savedNumCorrect = StateManager.retrieveData(key: StateManager.numCorrectKey) as? Int
+            
+            if savedNumCorrect != nil {
+                
+                numCorrect = savedNumCorrect!
+                
+            }
+        }
+     
         // display the first question
         displayQuestion()
         
     }
-    
-    
     
 }
 
@@ -174,15 +196,23 @@ extension ViewController: DetailViewControllerProtocol {
         
         if currentQuestionIndex == questions.count {
             
-            // user has just answered the last question, show summary dialog
-            detailDialog!.titleText = "Summary"
-            detailDialog!.feedbackText = "You got \(numCorrect) out of \(questions.count) questions correct."
-            detailDialog!.buttonText = "Restart"
-            
-            // present summary popup
-            present(detailDialog!, animated: true, completion: nil)
+            if detailDialog != nil {
+             
+                // user has just answered the last question, show summary dialog
+                detailDialog!.titleText = "Summary"
+                detailDialog!.feedbackText = "You got \(numCorrect) out of \(questions.count) questions correct."
+                detailDialog!.buttonText = "Restart"
+                
+                // present summary popup
+                present(detailDialog!, animated: true, completion: nil)
+                
+                // clear state
+                StateManager.clearState()
+                
+            }
         }
         else if currentQuestionIndex > questions.count {
+            
             // restart
             print("Summary - restart tapped")
             numCorrect = 0
@@ -193,8 +223,9 @@ extension ViewController: DetailViewControllerProtocol {
             
             // there are still more questions, display next question
             displayQuestion()
+            
+            // save state
+            StateManager.saveState(numCorrect: numCorrect, questionIndex: currentQuestionIndex)
         }
-        
     }
 }
-

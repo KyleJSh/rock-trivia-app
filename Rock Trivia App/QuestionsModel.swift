@@ -46,14 +46,10 @@ class QuestionsModel {
                 
                 // pass parsed json to viewcontroller
                 self.delegate?.questionsRetrieved(array)
-                
             }
-            
         }
         catch {
             print("Couldn't parse JSON")
         }
-        
     }
-    
 }
