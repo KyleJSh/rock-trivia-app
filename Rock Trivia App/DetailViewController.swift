@@ -7,9 +7,17 @@
 
 import UIKit
 
+protocol DetailViewControllerProtocol {
+    
+    func dialogDismissed()
+    
+}
+
 class DetailViewController: UIViewController {
 
     // MARK: - Variables and Properties
+    
+    var delegate:DetailViewControllerProtocol?
     
     @IBOutlet weak var dimView: UIView!
     @IBOutlet weak var dialogView: UIView!
@@ -29,11 +37,16 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
         // set title label text
         titleLabel.text = titleText
         feedbackLabel.text = feedbackText
         dismissButton.setTitle(buttonText, for: .normal)
-
+        
     }
     
 
@@ -41,8 +54,11 @@ class DetailViewController: UIViewController {
     
     @IBAction func dismissTapped(_ sender: Any) {
         
-        // dismiss the popup
+        dismiss(animated: true, completion: nil)
         
+        // dismiss the popup
+        delegate?.dialogDismissed()
+                
     }
     
     

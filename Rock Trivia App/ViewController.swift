@@ -18,10 +18,10 @@ class ViewController: UIViewController {
     // keep track of correct answers to display at end of game, store in cache
     var numCorrect = 0
     
-    var detailDialog:DetailViewController?
-    
     // keep track of which question the user is on, store in cache
     var currentQuestionIndex = 0
+    
+    var detailDialog:DetailViewController?
     
     // MARK: - Lifecycle
     
@@ -33,6 +33,9 @@ class ViewController: UIViewController {
         // set modal presentation style
         detailDialog?.modalPresentationStyle = .overCurrentContext
         
+        // delegate of DetailViewController
+        detailDialog?.delegate = self
+        
         // delegate of QuizModel
         model.delegate = self
         tableView.delegate = self
@@ -42,7 +45,7 @@ class ViewController: UIViewController {
         model.getQuestions()
         
     }
-
+    
     // MARK: - Methods
     
     func displayQuestion() {
@@ -76,20 +79,17 @@ extension ViewController: QuizProtocol, UITableViewDelegate, UITableViewDataSour
         
         if currentQuestion.answers != nil {
             
-          return currentQuestion.answers!.count
+            return currentQuestion.answers!.count
             
         }
         else {
             return 0
         }
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "AnswerCell", for: indexPath)
-        
-        // TODO: configure cell
         
         // try and cast tag 1 (question label) as a UILabel
         let label = cell.viewWithTag(1) as? UILabel
@@ -146,12 +146,6 @@ extension ViewController: QuizProtocol, UITableViewDelegate, UITableViewDataSour
             
         }
         
-        // increment currentQuestionIndex
-        currentQuestionIndex += 1
-        
-        // display the next question
-        displayQuestion()
-        
     }
     
     // MARK: - QuestionsProtocol
@@ -165,4 +159,35 @@ extension ViewController: QuizProtocol, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    
+    
 }
+
+// MARK: - Detail View Controller Protocol Methods
+
+extension ViewController: DetailViewControllerProtocol {
+    
+    func dialogDismissed() {
+        
+        // increment currentQuestionIndex
+        currentQuestionIndex += 1
+        
+        if currentQuestionIndex == questions.count {
+            
+            // user has just answered the last question, show summary dialog
+            detailDialog!.titleText = "Summary"
+            detailDialog!.feedbackText = "You got \(numCorrect) out of \(questions.count) questions correct."
+            detailDialog!.buttonText = "Restart"
+            
+            // present summary popup
+            present(detailDialog!, animated: true, completion: nil)
+        }
+        else if currentQuestionIndex < questions.count {
+            
+            // there are still more questions, display next question
+            displayQuestion()
+        }
+        
+    }
+}
+

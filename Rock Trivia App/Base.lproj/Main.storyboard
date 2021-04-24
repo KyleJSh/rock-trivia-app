@@ -67,9 +67,6 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <connections>
-                                                    <segue destination="Mni-MO-9gE" kind="presentation" id="0s3-se-yja"/>
-                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -109,35 +106,36 @@
             <objects>
                 <viewController storyboardIdentifier="ResultVC" id="Mni-MO-9gE" customClass="DetailViewController" customModule="Rock_Trivia_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QV4-o5-tuz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjM-9O-GTV" userLabel="Dim View">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fch-HX-iV5" userLabel="Dialog View">
-                                        <rect key="frame" x="50" y="50" width="314" height="692"/>
+                                        <rect key="frame" x="50" y="50" width="314" height="746"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Oei-tp-fl7" userLabel="VStack">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="692"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="746"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fBe-qX-HZv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="173"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="186.5"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEr-bI-MMa" userLabel="Title">
-                                                        <rect key="frame" x="0.0" y="173" width="314" height="173"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                        <rect key="frame" x="0.0" y="186.5" width="314" height="186.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Feedback" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKv-U2-uvW">
-                                                        <rect key="frame" x="0.0" y="346" width="314" height="173"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <rect key="frame" x="0.0" y="373" width="314" height="186.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfb-sW-sjN">
-                                                        <rect key="frame" x="141" y="519" width="32" height="173"/>
+                                                        <rect key="frame" x="135.5" y="559.5" width="43" height="186.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <state key="normal" title="Next"/>
                                                         <connections>
                                                             <action selector="dismissTapped:" destination="Mni-MO-9gE" eventType="touchUpInside" id="k6o-k8-oUR"/>
