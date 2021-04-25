@@ -20,7 +20,7 @@
 
 #### Build local json file for question, 4 answers, correct index number, and feedback to display when answered correctly
 
-![json](/readme-images/summary.png)
+![json](/readme-images/json.png)
 
 #### Import icons
 
@@ -28,4 +28,4 @@
 
 #### Use storyboard to create views
 
-![storyboard](.readme-images/storyboard.png)
+![storyboard](/readme-images/storyboard.png)
