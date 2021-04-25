@@ -4,4 +4,4 @@
 
 ### One of the questions, the user has 4 choices
 
-![
+![launch](/readme-images/launch.png)
